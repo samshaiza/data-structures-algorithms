@@ -2,12 +2,11 @@
 
 ## Big O
 
-Big O is a way to categotize your algorithms time and space requirements based on input. not an exact measurement.
-(As input grows how fast does computation or memory grow?)
+Big O is a way to categorize your algorithm's time and space requirements based on input. not an exact measurement. (As input grows, how fast does computation or memory grow?)
 
 ## Why
 
-Helps us make decisions on what data structures and algorithms to use.
+It helps us make decisions on what data structures and algorithms to use.
 
 ## Example 1
 
@@ -22,9 +21,10 @@ function sum_char_codes(n: string): number {
 }
 ```
 
-We have a _O(n)_ time complexity
+We have a _O(n)_ time complexity.
 
 Look for the **loops!**
+
 We are traversing the length of _n_. The complexity of the program is dependent on the size of _n!_
 
 ## Concepts
@@ -32,16 +32,19 @@ We are traversing the length of _n_. The complexity of the program is dependent 
 1. Growth is with respect to the input
 2. Constants are dropped
 
-O(2n) -> O(n). Big O is meant to describe the upper bound of the algorithm (growth). The constant eventually becomes irrelevent
+O(2n) -> O(n). Big O is meant to describe the upper bound of the algorithm (growth). The constant eventually becomes irrelevent.
 
+```
 n = 1, O(10n) = 10, O(n^2) = 2
 
 n = 5, O(10n) = 50, O(n^2) = 25
 
 n = 1000, O(10n) = 10,000, O(n^2) = 1,000,000 // 100x bigger
 
-n = 10000, O(10n) = 100,000, O(n^2) = 100,000,000 // 1000x bigger
-_and so on..._
+n = 10000, O(10n) = 100,000, O(n^2) = 100,000,000 // 1000x bigger and so on...
+```
+
+## Example 2
 
 ```
 function sum_char_codes(n: string): number {
@@ -60,7 +63,7 @@ function sum_char_codes(n: string): number {
 }
 ```
 
-In BigO we often consider the worst case scenario
+In BigO, we often consider the worst case scenario
 
 The example above is _O(n)_
 
