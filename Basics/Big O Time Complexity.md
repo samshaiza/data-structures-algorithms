@@ -80,7 +80,8 @@ function sum_char_codes(n: string): number {
 
 ### O(n^3)
 
-```function sum_char_codes(n: string): number {
+```
+function sum_char_codes(n: string): number {
     let sum = 0;
     for (let i = 0; i < n.length; ++i) {
         for(let j = 0; j < n.length; ++j) {
