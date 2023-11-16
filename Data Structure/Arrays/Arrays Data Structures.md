@@ -8,8 +8,8 @@ Each element in an array is located next to one or two other elements. This make
 
 This implies that array's size (memory allocated) must be set on initialize.
 
-```
-let a: int = new Array[3] // Create 3 integers in contiguous space
+```typescript
+let a: int = new Array[3](); // Create 3 integers in contiguous space
 ```
 
 Let's say `a[0]` is at memory location 1000. An integer takes up 4 bytes of memory, so my second element `a[1]` will be located at 1004. `a[2]` is at 1008, etc.
@@ -24,8 +24,8 @@ The index is an integer that represents the position of the element in the array
 
 Take the size of the data type and multiply it by the offset. Put it at the memory address and grab the element.
 
-```
-a[0] // Go to the memory address of 'a' then multiply the offset of zero multipied by how big this array's type.
+```typescript
+a[0]; // Go to the memory address of 'a' then multiply the offset of zero multipied by how big this array's type.
 ```
 
 The data type of the `a` array is an integer.
