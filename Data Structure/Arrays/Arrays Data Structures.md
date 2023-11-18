@@ -1,12 +1,14 @@
 # Arrays
 
-## What is an array?
+## Definition
 
-An array is a contiguous structure. Contiguous means that data is kept _together_ in memory (i.e RAM).
+An array is a contiguous structure in which data is stored together in memory (RAM).
 
 Each element in an array is located next to one or two other elements. This makes them fixed in size and unable to grow.
 
 This implies that array's size (memory allocated) must be set on initialize.
+
+## Memory Layout
 
 ```typescript
 let a: int = new Array[3](); // Create 3 integers in contiguous space
@@ -19,6 +21,8 @@ To access an element in an array, we use the index of that element.
 ## What is an index?
 
 The index is an integer that represents the position of the element in the array, which in turn is used to calculate the memory address of the element so we can access it directly.
+
+`memory address = base address + (index * size of data type)`
 
 ## Getting at specific index
 
@@ -37,7 +41,7 @@ The data type of the `a` array is an integer.
 
 ## Insertion at specific index
 
-Overwrite at index by getting the memory address of the array, find the width of the type and multiply by the offset.
+Overwrite at index by finding the address of the element and replacing the value by the target value.
 
 ## Deletion at specific index
 
@@ -47,6 +51,8 @@ Like insertion, except we overwrite with a null or 0 value.
 
 Does getting at a specific index grow from the size of an array?
 
-O(1), constant time!
+## Big O
 
-That's because aray element's can be accessed in constant time by using the index of the particular element as the subscript.
+Time complexity: O(1) (constant time).
+
+Accessing an element's index is done in constant time using the subscript of the element.

@@ -1,10 +1,10 @@
 # Problem
 
-Given two crystal balls that will break if dropped from a high enough distance, determine the exact spot in which it will break in the most optimized way.
+Given two crystal balls prone to breaking from a sufficient height, find the exact spot of breakage in the most optimized way.
 
 ## What's problem asking?
 
-We're given an array of `falses` up until a point that is `true`, and from that point onwards it will always return `true`. Find the first instance of true.
+Determine the first occurrence of `true` in an array that transitions from `false` to `true.`
 
 Which is a better algorithm to solve this problem? Linear search or binary search?
 
@@ -18,12 +18,45 @@ While our data set is indeed ordered, a problem occurs. What if we grab the midp
 
 What if we could combine both the benefits from linear search and binary search? If we find a point in where we find a true value then we can linear search through the lo and hi bounds.
 
+## Optimized approach
+
 That's a really good idea! But, we don't really get any added benefit with the binary search addition. Because we have linear search it'd still be constant time.
 
-If we could jump through the array, walk through the subarray and find the first true value, we'd find our first true.
+Combine benefits of both linear search and binary search.
 
-Let's do the square root of n
+**Idea**: Jump through the array, navigate subarray linearly, and find the first true.
+
+Let's do the square root of n.
+
+## Implementation
+
+```typescript
+export default function two_crystal_balls(breaks: boolean[]): number {
+   const jmpAmount = Math.floor(Math.sqrt(breaks.length));
+   let startAmount = jmpAmount;
+
+   for (; startAmount < breaks.length; startAmount += jmpAmount) {
+      if (breaks[startAmount]) {
+         break;
+      }
+   }
+   startAmount -= jmpAmount;
+
+   for (
+      let j = 0;
+      j < jmpAmount && startAmount < breaks.length;
+      ++j, ++startAmount
+   ) {
+      if (breaks[startAmount]) {
+         return startAmount;
+      }
+   }
+   return -1;
+}
+```
 
 ## Big O
 
-O(sqrt(n))
+O(sqrt(n)).
+
+If we could jump through the array, walk through the subarray and find the first true value, we'd find our first true.

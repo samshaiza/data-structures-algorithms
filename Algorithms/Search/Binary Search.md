@@ -1,16 +1,20 @@
 ## Can we get a faster search?
 
-Are we searching in a data set that's ordered? If our data set is ordered we can have new advantages.
+Are we searching in a data set that's ordered? If our data set is ordered we can search faster then in an unordered set.
 
-If we have an ordered data set, we don't have to go element by element to find our desired target.
-
-Because our data set is ordered, we have some hints as to where out target value is at.
+That's because we can potentially eliminate the need to go element by element.
 
 # Binary Search
 
-Choose the value in the middle of the data set. If that value equals our target value we win. Yay! Otherwise, If our target value is more then the middle value then we know that the first half of the data set has no relevence for our search and we will ignore it. If it's less then the middle value. The same goes, the right half of the data set will be ignored.
+## Process
 
-With our halved data set we'll do the same thing. Get the middle value. Compare it with our target value. Target value is more then the middle value? Move to the right side of the set. Less then? Left side.
+- Choose the middle value of the data set.
+
+- If it equals the target value, the search is successful.
+
+- If the target value is greater, ignore the left half; if less, ignore the right half.
+
+- Repeat the process with the halved data set until the target is found or no more entries to halve.
 
 ## Pseudocode
 ```typescript
@@ -40,7 +44,7 @@ search(arr, target)
     return 0;
 ```
 
-We can do this recursively until either there is no more entries to halve, or we found our value.
+We could also recursively divide the data set until either the target value is found or there are no more entries to halve.
 
 ## Implementation
 
@@ -67,10 +71,12 @@ export default function bin_search(haystack: number[], needle: number): number{
 
 ## Big O
 
-O(log n)
+O(log n). The data set is halved a logarithmic number of times until the value is found.
 
-Until we find our value, we'll half the the data set.
+The input is halved at each step, indicating a time complexity of O(log n) or O(n log n). The efficiency of the binary search lies in reducing the search space exponentially.
 
-We are halving a log * the length of the data set amount of times.
+### Note
 
 **If the input halves at each step, it's likely O(log n) or O(n log n)**
+
+The success of binary search relies on the ordered nature of the data set, enabling efficient elimination of irrelevant portions.

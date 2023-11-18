@@ -2,9 +2,13 @@
 
 The most simple form of search
 
-## How does it work?
+## Process
 
-A linear search traverses an array to _search_ for a target value. One by one, we check whether or not an element of an index is that target value. If not, move to the next index.
+- Check each element of the array one by one.
+
+- If the element at the current index is the target value, the search is successful.
+
+- Move to the next index if the target value is not found.
 
 The `indexOf()` function in JavaScript and Java does this, as does the `index()` method in Python as well.
 
