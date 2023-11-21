@@ -32,7 +32,7 @@ We are traversing the length of _n_. The complexity of the program is dependent 
 1. Growth is with respect to the input.
 2. Constants are dropped.
 
-O(2n) -> O(n). Big O is meant to describe the upper bound of the algorithm (growth). The constant eventually becomes irrelevent.
+O(2n) -> O(n). Big O is meant to describe the upper bound of the algorithm (growth). The constant eventually becomes irrelevant.
 
 ```typescript
 (n = 1), O(10n) = 10, O(n ^ 2) = 2;
@@ -63,7 +63,7 @@ function sum_char_codes(n: string): number {
 }
 ```
 
-In BigO, we often consider the worst case scenario
+In Big O, we often consider the worst case scenario
 
 The example above is _O(n)_
 
@@ -107,6 +107,8 @@ Quicksort
 
 ### O(log n)
 
-Binary search trees
+[[Binary Search]]
 
 ### O(sqrt(n))
+
+[[Two Crystal Balls]]

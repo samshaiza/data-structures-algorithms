@@ -1,3 +1,4 @@
+#algorithm
 ## Can we get a faster search?
 
 Are we searching in a data set that's ordered? If our data set is ordered we can search faster then in an unordered set.
@@ -16,7 +17,8 @@ That's because we can potentially eliminate the need to go element by element.
 
 - Repeat the process with the halved data set until the target is found or no more entries to halve.
 
-## Pseudocode
+## Pseudo-code
+
 ```typescript
 arr = data set to search
 target = value to find

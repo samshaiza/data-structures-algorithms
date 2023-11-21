@@ -1,3 +1,4 @@
+#dsa 
 # Problem
 
 Given two crystal balls prone to breaking from a sufficient height, find the exact spot of breakage in the most optimized way.
@@ -6,7 +7,7 @@ Given two crystal balls prone to breaking from a sufficient height, find the exa
 
 Determine the first occurrence of `true` in an array that transitions from `false` to `true.`
 
-Which is a better algorithm to solve this problem? Linear search or binary search?
+Which is a better algorithm to solve this problem? [[Linear search]] or [[binary search]]?
 
 ## How to solve
 
@@ -14,7 +15,7 @@ In linear search we have to traverse our array from the beginning to the end unt
 
 Well how about binary search?! Our data is ordered, from false to true, so we run a binary search we can find the first instance of true.
 
-While our data set is indeed ordered, a problem occurs. What if we grab the midpoint of the array and it returns true? Though that is the value we want how do we know that it's the first one? If it isn't, which subarray would we go to? The left or the right?
+While our data set is indeed ordered, a problem occurs. What if we grab the midpoint of the array and it returns true? Though that is the value we want how do we know that it's the first one? If it isn't, which sub-array would we go to? The left or the right?
 
 What if we could combine both the benefits from linear search and binary search? If we find a point in where we find a true value then we can linear search through the lo and hi bounds.
 
@@ -24,7 +25,7 @@ That's a really good idea! But, we don't really get any added benefit with the b
 
 Combine benefits of both linear search and binary search.
 
-**Idea**: Jump through the array, navigate subarray linearly, and find the first true.
+**Idea**: Jump through the array, navigate sub-array linearly, and find the first true.
 
 Let's do the square root of n.
 
@@ -59,4 +60,4 @@ export default function two_crystal_balls(breaks: boolean[]): number {
 
 O(sqrt(n)).
 
-If we could jump through the array, walk through the subarray and find the first true value, we'd find our first true.
+If we could jump through the array, walk through the sub-array and find the first true value, we'd find our first true.

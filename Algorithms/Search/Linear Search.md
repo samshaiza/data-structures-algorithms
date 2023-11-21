@@ -1,10 +1,9 @@
-# Linear Search
+#algorithm 
 
-The most simple form of search
-
+**The most simple form of search**
 ## Process
 
-- Check each element of the array one by one.
+- Check each element of the [[Arrays]] one by one.
 
 - If the element at the current index is the target value, the search is successful.
 
