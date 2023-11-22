@@ -103,7 +103,7 @@ function sum_char_codes(n: string): number {
 
 ### O(n log n)
 
-Quicksort
+QuickSort
 
 ### O(log n)
 
